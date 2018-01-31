@@ -2,20 +2,25 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
+    static int[] mas= new int[5];
+    static int suma=0;
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        Main objektas = new Main();
+        Masyvas();
+        System.out.println("Suma: " + suma);
+        Rasymas();
     }
 
-    public Main(){
-        Scanner sc = new Scanner(System.in);
-        int[] mas= new int[5];
-        int suma=0;
+    public static void Masyvas(){
+
         for (int i=0; i<mas.length; i++){
             System.out.println("Iveskite skaciu: ");
             mas[i]=sc.nextInt();
             suma+=mas[i];
         }
-        System.out.println("Suma: " + suma);
+    }
+
+    public static void Rasymas(){
         for (int i=0; i<mas.length; i++){
             System.out.println("Masyvo " + i + " skaitmuo yra "+mas[i]);
         }
